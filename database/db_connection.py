@@ -42,4 +42,4 @@ class DB_connection:
                        assigned_agent_id INT
                        )
                        """)
-      
+con = DB_connection().create_tables()        
