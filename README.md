@@ -19,7 +19,9 @@ intelligence-task-manager/
 └── .gitignore
 ```
 
-## טבלת agents
+## מבנה הטבלאות
+
+### טבלת agents
 
 
 type | field
@@ -34,7 +36,8 @@ agent_rank | Junior / Senior / Commander ENUM / VARCHAR
 |
 
 
-## טבלת missions
+
+### טבלת missions
 tipe | filed 
 |--|--|
 id | INT, AUTO_INCREMENT, PK
@@ -48,7 +51,9 @@ level_risk | VARCHAR
 assigned_agent_id | INT
 |
 
-## מחלקה AgentBB
+## תיאור מתודות הבסיס נתונים
+
+### מתודות מחלקה AgentBB
 
 תפקיד | מתודה
 |--|--|
@@ -62,7 +67,7 @@ update_agent(id, data) | )id לשנות אפשרות אין )השורה לכל U
 get_agent_performance(id) | completed, failed, total,האלוהמפתחותעםמילוןמחזירהsuccess_rate)שימו לב לחשב את הערך הזה rate_success - כמה באחוזים משימותהסתיימו בהצלחה מתוך הסך הכולל(| 
 count_active_agent()| מחזירה את מספר הסוכנים הפעילים 
 
-## מתודות MissionDB
+### מתודות מחלקה MissionDB
 
 תפקיד|  מתודה
 |--|--|
