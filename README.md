@@ -97,6 +97,10 @@ get_top_agent() | הסוכן ביותר הגבוה completed_missions עם
 
 ## הרצת התוכנית 
 
+### להורדת הפרויקט
+
+`git clone https://github.com/avrhahm-lider/intelligence-task-manager.git`
+
 ### יש להריץ את הפקודות בשורה אחת ולהוריד את `\`
 
 ```
