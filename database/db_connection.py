@@ -30,7 +30,7 @@ class DB_connection:
                        )
                        """)    
         cursor.execute("""
-                       CREATE TABLE IF NOT EXISTS mission(
+                       CREATE TABLE IF NOT EXISTS missions(
                        id INT AUTO_INCREMENT PRIMARY KEY,
                        title VARCHAR(50) NOT NULL,
                        description TEXT NOT NULL,
@@ -42,4 +42,4 @@ class DB_connection:
                        assigned_agent_id INT
                        )
                        """)
-con = DB_connection().create_tables()        
+con = DB_connection().get_connection()       
