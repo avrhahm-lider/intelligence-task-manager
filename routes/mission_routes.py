@@ -12,6 +12,7 @@ def create_mission(body : Mission):
     logger.info("POST/ create_mission called")
     try:
         data = body.model_dump()
+        print(data)
         return create_mission_validition(data)
         logger.info()
     except Exception as e:
@@ -50,7 +51,7 @@ def assing_mission(id: int, agent_id: int):
     except ValueError as e:
         raise HTTPException(400,f"{e}")
     except Exception as e:
-        logger.error()
+        logger.error(f"{e}")
         raise HTTPException(500, f"{e}")
 
 
@@ -67,7 +68,8 @@ def start_mission(id):
         logger.error(f"{e}")
         raise HTTPException(400, f"{e}")
     except Exception as e:
-        logger.error()
+        logger.error(f"{e}")
+        raise HTTPException(500, f"{e}")
 
 @router.put("/{id}/complete")
 def complete_mission(id):
@@ -82,7 +84,8 @@ def complete_mission(id):
         logger.error(f"{e}")
         raise HTTPException(400, f"{e}")
     except Exception as e:
-        logger.error()
+        logger.error(f"{e}")
+        raise HTTPException(500, f"{e}")
 
 @router.put("/{id}/fail")
 def fail_mission(id):
@@ -97,7 +100,8 @@ def fail_mission(id):
         logger.error(f"{e}")
         raise HTTPException(400, f"{e}")
     except Exception as e:
-        logger.error()
+        logger.error(f"{e}")
+        raise HTTPException(500, f"{e}")
 
 
 @router.put("/{id}/cancel")
@@ -113,4 +117,5 @@ def cancel_mission(id):
         logger.error(f"{e}")
         raise HTTPException(400, f"{e}")
     except Exception as e:
-        logger.error()
+        logger.error(f"{e}")
+        raise HTTPException(500, f"{e}")
